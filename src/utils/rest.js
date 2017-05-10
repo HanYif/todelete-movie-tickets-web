@@ -70,6 +70,13 @@ export default class REST {
       url = url + this._objToUrl(params)
     }
 
+    console.log('baseURL', this.baseURL)
+    console.log('headers', this.headers)
+    console.log('method', method)
+    console.log('url', url)
+    console.log('data', data)
+    console.log('version', this.version)
+
     return new Promise((resolve, reject) => {
       axios({
         baseURL: this.baseURL,

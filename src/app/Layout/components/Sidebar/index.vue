@@ -1,14 +1,28 @@
 <template>
   <div class="sidebar">
-    <Menu ref="menu" :active-name="activeName" width="auto" :open-names="openNames" @on-select="handleSelect">
-      <Submenu name="articles">
+    <Menu mode="horizontal" :theme="theme1" ref="menu" :active-name="activeName" width="auto" :open-names="openNames" @on-select="handleSelect">
+      <Menu-item name="home">
+        <Icon type="home"></Icon>
+        首页
+      </Menu-item>
+      <Menu-item name="movie-list">
+        <Icon type="ios-list"></Icon>
+        影片
+      </Menu-item>
+      <Menu-item name="theaters">
+        <Icon type="easel"></Icon>
+        影院
+      </Menu-item>
+
+
+      <!-- <Submenu name="articles">
         <template slot="title">
           <Icon type="document-text"></Icon>
           文章管理
         </template>
         <Menu-item name="/articles">文章列表</Menu-item>
-      </Submenu>
-      <Submenu name="x">
+      </Submenu> -->
+      <!-- <Submenu name="x">
         <template slot="title">
           <Icon type="document"></Icon>
           文件管理
@@ -17,7 +31,7 @@
       <Submenu name="x">
         <template slot="title">
           <Icon type="person-stalker"></Icon>
-          会员管理
+          会员管理 
         </template>
       </Submenu>
       <Submenu name="x">
@@ -43,7 +57,7 @@
           <Icon type="gear-b"></Icon>
           网站设置
         </template>
-      </Submenu>
+      </Submenu> -->
     </Menu>
   </div>
 </template>
@@ -54,7 +68,8 @@
     data () {
       return {
         activeName: '',
-        openNames: []
+        openNames: [],
+        theme1: 'dark'
       }
     },
     created () {

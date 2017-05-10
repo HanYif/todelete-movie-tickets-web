@@ -11,10 +11,10 @@ const PROD = 'PROD'
 const ENV = HOST === 'localhost:8080' ? DEV : PROD
 
 // 基础地址
-const BASE_URL = ENV === DEV ? 'http://www.cms.com' : 'http://api.liruan.cn'
+const BASE_URL = ENV === DEV ? 'https://www.easy-mock.com/mock' : 'https://www.easy-mock.com/mock'
 
 // 接口地址
-const API_URL = BASE_URL + '/apis'
+const API_URL = BASE_URL + '/590722f27a878d73716e3bec/tickets-booking'
 
 // 分页大小
 const PAGE_SIZE = 10

@@ -64,6 +64,8 @@
             data: this.formValidate
           })
           .then((res) => {
+            console.log('res', res)
+
             this.$Message.success('登录成功')
             auth.login(res.data.data)
             this.$router.push('/')

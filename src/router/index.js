@@ -19,12 +19,15 @@ const router = new Router({
       component: Root,
       children: [
         {
+          // url: http://localhost:8080/#/
           path: '/',
           component: Layout,
           children: [
             home,
             articles
           ],
+          // 用于router.beforeEach钩子函数登录判断；
+          // 通过对to.matched的判断是否登录；
           meta: {
             requiresAuth: true
           }

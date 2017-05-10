@@ -1,24 +1,24 @@
 <template>
   <div>
-    <Header></Header>
+    <CustomHeader></CustomHeader>
     <div class="main">
       <Sidebar ref="sidebar"></Sidebar>
-      <Body></Body>
+      <CustomBody></CustomBody>
     </div>
   </div>
 </template>
 
 <script>
   import Sidebar from './components/Sidebar'
-  import Header from './components/Header'
-  import Body from './components/Body'
+  import CustomHeader from './components/Header'
+  import CustomBody from './components/Body'
 
   export default {
     name: 'layout',
     components: {
       Sidebar,
-      Header,
-      Body
+      CustomHeader,
+      CustomBody
     },
     beforeRouteUpdate (to, from, next) {
       this.$nextTick(() => {
