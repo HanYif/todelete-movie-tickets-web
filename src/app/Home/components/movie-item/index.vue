@@ -1,19 +1,38 @@
 <template>
   <div class="container">
     <div class="img-container">
-      <img src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/movie/pic/item/dc54564e9258d109afede3a3db58ccbf6c814d90.jpg" alt="img">
+      <img :src="mData.src" alt="img">
     </div>
-    <p class="title">摔跤吧！爸爸</p>
+    <p class="title">{{mData.name}}</p>
     <div class="footer">
-      <a href="www.baidu.com">选票定座</a>
-      <span>7.2</span>
+      <a :href="mHref">选票定座</a>
+      <span>{{mData.point}}</span>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'home'
+    name: 'MovieItem',
+    props: {
+      movieData: {
+        type: Object,
+        default () {
+          return {
+            id: 0,
+            name: 'xxx',
+            src: 'http://pic.qiantucdn.com/58pic/26/04/14/41p58PICSIx_1024.jpg!/watermark/url/L3dhdGVybWFyay12MS5wbmc=/align/north/repeat/true',
+            point: 0
+          }
+        }
+      }
+    },
+    data () {
+      return {
+        mData: this.movieData,
+        mHref: '#/movie_detail/' + this.movieData.id
+      }
+    }
   }
 </script>
 

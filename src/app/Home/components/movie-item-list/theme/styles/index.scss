@@ -1,0 +1,19 @@
+.container {
+  width: 960px;
+  
+  .title {
+    font-size: 13pt;
+    padding: 5px;
+  }
+  .page-info {
+    float: right;
+    font-size: 14px;
+  } 
+
+  .body {
+    .flex {
+      display: flex;
+    }
+  }
+  
+}

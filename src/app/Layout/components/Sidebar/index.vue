@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <Menu mode="horizontal" :theme="theme1" ref="menu" :active-name="activeName" width="auto" :open-names="openNames" @on-select="handleSelect">
-      <Menu-item name="home">
+      <Menu-item name="/">
         <Icon type="home"></Icon>
         首页
       </Menu-item>
@@ -13,51 +13,6 @@
         <Icon type="easel"></Icon>
         影院
       </Menu-item>
-
-
-      <!-- <Submenu name="articles">
-        <template slot="title">
-          <Icon type="document-text"></Icon>
-          文章管理
-        </template>
-        <Menu-item name="/articles">文章列表</Menu-item>
-      </Submenu> -->
-      <!-- <Submenu name="x">
-        <template slot="title">
-          <Icon type="document"></Icon>
-          文件管理
-        </template>
-      </Submenu>
-      <Submenu name="x">
-        <template slot="title">
-          <Icon type="person-stalker"></Icon>
-          会员管理 
-        </template>
-      </Submenu>
-      <Submenu name="x">
-        <template slot="title">
-          <Icon type="ios-home-outline"></Icon>
-          店铺管理
-        </template>
-      </Submenu>
-      <Submenu name="x">
-        <template slot="title">
-          <Icon type="android-cart"></Icon>
-          商品管理
-        </template>
-      </Submenu>
-      <Submenu name="x">
-        <template slot="title">
-          <Icon type="android-cart"></Icon>
-          订单管理
-        </template>
-      </Submenu>
-      <Submenu name="x">
-        <template slot="title">
-          <Icon type="gear-b"></Icon>
-          网站设置
-        </template>
-      </Submenu> -->
     </Menu>
   </div>
 </template>
